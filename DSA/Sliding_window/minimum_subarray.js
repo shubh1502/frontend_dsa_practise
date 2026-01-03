@@ -7,8 +7,8 @@ function miniMumSubArrayOfTargetSum(arr, target) {
         currentSum += arr[right];
 
         while(currentSum >=target){            
-            currentSum -= arr[left];
             minLnegth = Math.min(minLnegth, right - left + 1);
+            currentSum -= arr[left];
             left++; 
         }
 
