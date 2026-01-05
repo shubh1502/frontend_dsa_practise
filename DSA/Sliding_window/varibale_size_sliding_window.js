@@ -6,7 +6,7 @@ function uniquelongestSubstring(s) {
 
     for(let right = 0;right<s.length;right++) {
         while(unique.has(s[right])) {
-            console.log(s[right])
+            // console.log(s[right])
             unique.delete(s[left]);
             left++;
 
@@ -15,7 +15,7 @@ function uniquelongestSubstring(s) {
         maxLength = Math.max(maxLength, right - left + 1);
     }
 
-    return unique.size;
+    return maxLength;
 }
 
-console.log(uniquelongestSubstring("abcabcbbcde")); // Output: 3
+console.log(uniquelongestSubstring("abcabcbbcde")); // Output: 4
